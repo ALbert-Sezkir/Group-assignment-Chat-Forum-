@@ -31,6 +31,6 @@ const Navbar = () => {
    
   )
 }
-<div>hej</div>
+
 export default Navbar
 
