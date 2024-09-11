@@ -1,3 +1,5 @@
+import { Divide } from "lucide-react";
+
 type ThreadCategory = "Thread" | "QNA";
 
 
@@ -34,3 +36,4 @@ type ThreadComment = {
   
 };
 
+export type { Thread, ThreadCategory, User, ThreadComment, QNAThread };
