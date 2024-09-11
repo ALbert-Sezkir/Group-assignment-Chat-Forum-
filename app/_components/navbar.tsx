@@ -27,7 +27,10 @@ const Navbar = () => {
   </SignedIn>
 </ul>
     </div>
+
+   
   )
 }
+<div>hej</div>
 export default Navbar
 
