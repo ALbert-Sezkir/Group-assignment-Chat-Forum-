@@ -36,4 +36,4 @@ type ThreadComment = {
   
 };
 
-export type { Thread, ThreadCategory, User, ThreadComment, QNAThread };
+
