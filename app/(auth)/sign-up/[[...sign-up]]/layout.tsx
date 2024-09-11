@@ -7,7 +7,7 @@ function AuthLayout({ children }: LayoutProps) {
 
         <main className="bg-[#26313c] h-screen flex items-center justify-center p-10">
         <div className="w-full h-full grid-cols-1 bg-blue md:grid-cols-2">
-          <div className="bg-[#16202a] h-full text-white flex items-center justify-center flex-col mt-0">
+          <div className="bg-[#16202a] h-full text-white flex items-center justify-center flex-col">
             <div className="my-4">
               <h1 className="text-3xl font-semib mb-1">Sign up to Chat-Forum</h1>
               <p className="flex justify-center mt-2 text-xs text-slate-400">Sign up to your account</p>
