@@ -1,20 +1,33 @@
 import Link from "next/link"
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 
 const Navbar = () => {
   return (
     <div>
-      <ul className="flex justify-center items-center text-teal-400 text-lg font-serif py-8 px-4 gap-x-3 bg-slate-200 font-bold">
-        <Link href="/" >
-          Home 
-        </Link>
-        <Link href="/create" >
-          Create 
-        </Link>
-        {/* <Link href="/threads" >
-          Threads
-        </Link> */}
-      </ul>
+      <ul className="flex justify-center items-center text-white text-lg font-semibold py-8 px-4 gap-x-3 bg-[#16202a] ">
+        <li>
+    <Link href="/">
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link href="/create">
+      Create
+    </Link>
+  </li>
+  <SignedOut>
+    <li>
+      <SignInButton />
+    </li>
+  </SignedOut>
+  <SignedIn>
+    <li className="ml-4">
+      <UserButton />
+    </li>
+  </SignedIn>
+</ul>
     </div>
   )
 }
 export default Navbar
+

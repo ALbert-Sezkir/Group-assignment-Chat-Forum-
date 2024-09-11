@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 
+
 const CreateThread = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -21,7 +22,8 @@ const CreateThread = () => {
       creationDate: new Date().toISOString(),
       description,
       creator,
-      comments: []
+      comments: [],
+      locked: false,
     };
 
     const savedThreads = localStorage.getItem('threads');
@@ -38,9 +40,9 @@ const CreateThread = () => {
 
 
   return (
-    <main className="bg-teal-400 border-2  flex items-center justify-center p-10 shadow-xl">
+    <main className="bg-[#16202a] border-2  flex items-center justify-center p-10 shadow-xl">
       <div className="w-[800px] h-full grid-cols-1 bg-blue md:grid-cols-2 ">
-        <div className="bg-teal-400 h-full text-white pt-5 items-center justify-center ">
+        <div className="bg-[#16202a] h-full text-white pt-5 items-center justify-center ">
           <div className=""></div>
 
           <div className=" mx-auto w-full p-6 rounded ">
@@ -83,7 +85,7 @@ const CreateThread = () => {
               </div>
 
               <div className="flex items-center justify-between">
-                <button type="submit" className="w-full mt-6 text-white border-2 h-12 rounded-full hover:text-emerald-400 hover:bg-white">Create new thread</button>
+                <button type="submit" className="w-full mt-6 text-white border-2 h-12 rounded-full bg-indigo hover:text-white hover:bg-indigo-700">Create new thread</button>
               </div> 
             </form>
           </div>
