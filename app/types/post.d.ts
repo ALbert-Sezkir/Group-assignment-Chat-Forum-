@@ -1,4 +1,3 @@
-import { Divide } from "lucide-react";
 
 type ThreadCategory = "Thread" | "QNA";
 
