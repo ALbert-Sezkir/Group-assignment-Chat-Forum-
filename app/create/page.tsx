@@ -20,10 +20,11 @@ export default function Create() {
             <CreateThread /> 
             </SignedIn>
 
-            {/* bara för inloggade  */}
           </div>
         
   );
 }
+
+<div>hej</div>
 
         
