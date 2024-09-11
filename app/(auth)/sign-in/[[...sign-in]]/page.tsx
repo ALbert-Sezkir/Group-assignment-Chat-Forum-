@@ -5,4 +5,3 @@ export default function Page() {
   return <SignIn /> 
 }
 
-<div>hej</div>
