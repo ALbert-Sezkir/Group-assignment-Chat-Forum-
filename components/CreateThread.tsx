@@ -84,6 +84,8 @@ const CreateThread = () => {
                 />
               </div>
 
+              
+
               <div className="flex items-center justify-between">
                 <button type="submit" className="w-full mt-6 text-white border-2 h-12 rounded-full bg-indigo hover:text-white hover:bg-indigo-700">Create new thread</button>
               </div> 
