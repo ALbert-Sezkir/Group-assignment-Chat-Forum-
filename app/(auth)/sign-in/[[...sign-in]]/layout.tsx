@@ -5,7 +5,7 @@ interface LayoutProps { children?: ReactNode }
 function AuthLayout({ children }: LayoutProps) {
   return (
 
-    <main className="bg-[#26313c] h-screen flex items-center justify-center p-10">
+    <main className="bg-[#26313c] h-screen flex items-center justify-center p-10 bt-0">
     <div className="w-full h-full grid-cols-1 bg-blue md:grid-cols-2">
       <div className="bg-[#16202a] h-full text-white flex items-center justify-center flex-col">
         <div className="my-4">
