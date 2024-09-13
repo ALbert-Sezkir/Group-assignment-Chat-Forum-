@@ -194,10 +194,8 @@ const ThreadDetail = () => {
                             </button>
                           </div>
                         )}
-                      </SignedIn>
 
-                      <SignedIn>
-                        {isQNAThread(thread) && (
+                        {isQNAThread(thread) && isThreadCreator && (
                           <button
                             className="mt-2 bg-green-500 text-white px-3 rounded"
                             onClick={() => handleMarkAsAnswer(comment.id)}
@@ -205,11 +203,11 @@ const ThreadDetail = () => {
                             {thread.commentAnswerId === comment.id ? 'Unmark as Answer' : 'Mark as Answer'}
                           </button>
                         )}
-                      </SignedIn>
 
-                      {isQNAThread(thread) && thread.commentAnswerId === comment.id && (
-                        <p className="text-green-500">This is the accepted answer.</p>
-                      )}
+                        {isQNAThread(thread) && thread.commentAnswerId === comment.id && !isThreadCreator && (
+                          <p className="text-green-500">This is the accepted answer.</p>
+                        )}
+                      </SignedIn>
                     </div>
                   ))}
 
@@ -226,7 +224,7 @@ const ThreadDetail = () => {
                           onInput={(e) => setComment((e.target as HTMLDivElement).innerText)}
                         />
                         <button
-                          className="absolute right-6 bottom-6 bg-indigo- hover:bg-indigo-700 border text-white px-9 py-1 rounded"
+                          className="absolute right-6 bottom-6 bg-indigo-500 hover:bg-indigo-700 border text-white px-9 py-1 rounded"
                           onClick={handleAddComment}
                         >
                           {replyingToComment ? 'Reply Comment' : 'Add Comment'}
@@ -235,7 +233,7 @@ const ThreadDetail = () => {
                     </div>
                   )}
 
-                  {(user?.id === thread.creator.id || isAdmin) && (
+                  {(isThreadCreator || isAdmin) && (
                     <div className="flex justify-between mt-4">
                       <button
                         className="bg-red-500 text-white px-3 py-1 rounded flex items-center"
@@ -257,7 +255,9 @@ const ThreadDetail = () => {
 
                 <SignedOut>
                   <SignInButton>
-                    <button className="w-full mt-6 text-white border-2 h-12 rounded-full bg-indigo hover:text-white hover:bg-indigo-700">Sign in</button>
+                    <button className="w-full mt-6 text-white border-2 h-12 rounded-full bg-indigo-500 hover:text-white hover:bg-indigo-700">
+                      Sign in
+                    </button>
                   </SignInButton>
                   <p className="flex justify-center text-white">Please sign in to add a comment.</p>
                 </SignedOut>
