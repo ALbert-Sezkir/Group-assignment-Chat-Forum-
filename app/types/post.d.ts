@@ -1,11 +1,11 @@
 
 type ThreadCategory = "Thread" | "QNA";
 
-
-
 type User = {
+  id: string;
   userName: string;
   password: string;
+  isModerator: boolean;
   
 };
 
@@ -31,8 +31,10 @@ type ThreadComment = {
   thread: number;
   content: string;
   creator: User;
-  parentCommentId?: number; // Add this line to support replies
+  parentCommentId?: number | null; // Add this line to support replies
+  creationDate: string;
   
 };
+
 
 
