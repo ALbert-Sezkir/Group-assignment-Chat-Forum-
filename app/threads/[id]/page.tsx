@@ -67,10 +67,8 @@ const ThreadDetail = () => {
         setComment('');
         setParentComment(null);
         setReplyingToComment(null);
-
         if (commentRef.current) {
           commentRef.current.innerText = '';
-          commentRef.current.focus();
         }
       }
     }
@@ -134,7 +132,7 @@ const ThreadDetail = () => {
     setReplyingToComment(comment);
     setComment('');
     if (commentRef.current) {
-      commentRef.current.focus();
+      commentRef.current.innerText = '';
     }
   };
 
@@ -218,10 +216,10 @@ const ThreadDetail = () => {
                     <div className="relative flex items-center right-5 mt-2 w-[600px]">
                       <div className="relative flex items-center">
                         <div
-                          ref={commentRef}
-                          className="text-white m-4 p-5 rounded-md w-[600px] h-[80px] border border-white-300"
                           contentEditable
+                          ref={commentRef}
                           onInput={(e) => setComment((e.target as HTMLDivElement).innerText)}
+                          className="text-white m-4 p-5 rounded-md w-[600px] h-[80px] border border-white-300"
                         />
                         <button
                           className="absolute right-6 bottom-6 bg-indigo-500 hover:bg-indigo-700 border text-white px-9 py-1 rounded"
