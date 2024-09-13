@@ -31,7 +31,7 @@ type ThreadComment = {
   thread: number;
   content: string;
   creator: User;
-  parentCommentId?: number | null; // Add this line to support replies
+  parentCommentId?: number | null; 
   creationDate: string;
   
 };

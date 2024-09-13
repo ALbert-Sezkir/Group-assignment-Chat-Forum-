@@ -12,7 +12,7 @@ import censorComment from '@/lib/utils';
 
 const ADMIN_USER_ID = "user_2le5oJ8jdX29j9GvkxM6KRmDG2D";
 
-const ThreadDetail = () => {
+const ThreadDetail = () => { 
   const { id } = useParams<{ id: string }>();
   const [thread, setThread] = useState<Thread | QNAThread | null>(null);
   const [comment, setComment] = useState<string>('');

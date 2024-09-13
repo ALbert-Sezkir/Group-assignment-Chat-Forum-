@@ -3,8 +3,7 @@ import CreateThread from '../../components/CreateThread';
 import Navbar from "../_components/navbar";
 
 
-export default function Create() {
-  return (
+export default function Create() {  return (
     <div className="bg-[#16202a] min-h-screen font-serif">
 
        <Navbar/>
