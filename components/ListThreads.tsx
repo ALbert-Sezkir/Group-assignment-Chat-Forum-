@@ -16,7 +16,7 @@ function ListThreads() {
     if (savedThreads) {
       setThreads(JSON.parse(savedThreads));
     } else {
-      setError('Loggin to access the Chat Forum.');
+      setError('Sign in to access the Chat Forum.');
     }
   }, []);
 
