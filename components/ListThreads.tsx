@@ -16,7 +16,7 @@ function ListThreads() {
     if (savedThreads) {
       setThreads(JSON.parse(savedThreads));
     } else {
-      setError('Inga trådar hittades i localStorage.');
+      setError('Loggin to access the Chat Forum.');
     }
   }, []);
 
