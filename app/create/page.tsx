@@ -1,4 +1,4 @@
-import { SignedIn } from '@clerk/nextjs';
+import { SignedIn, SignedOut } from '@clerk/nextjs';
 import CreateThread from '../../components/CreateThread';
 import Navbar from "../_components/navbar";
 
@@ -18,6 +18,12 @@ export default function Create() {  return (
             <SignedIn>
             <CreateThread /> 
             </SignedIn>
+
+            <SignedOut>
+        <div className="text-center text-red-500 mt-10 border-white border-2 p-4">
+          <p className="text-2xl">Sign in to create threads</p>
+        </div>
+      </SignedOut>
 
           </div>
         

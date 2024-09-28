@@ -1,6 +1,7 @@
 'use client'
 import ListThreads from "@/components/ListThreads";
 import Navbar from "./_components/navbar";
+import { SignedOut } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -15,12 +16,18 @@ export default function Home() {
         <div className="font-bold text-start text-xl py-9 rounded-sm ">
             <ListThreads />
         </div>
-        <div>
-          <div>
+        
 
+        <SignedOut>
+  <div className="text-center text-red-500 mt-4 border-white border-2 p-4">
+    <p className="text-2xl">Please Sign in to Vibe & Talk!</p>
+  </div>
+</SignedOut>
+
+        
             
-          </div>
-        </div>
+          
+        
     </main>
   );
 }
