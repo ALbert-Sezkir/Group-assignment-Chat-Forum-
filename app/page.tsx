@@ -21,7 +21,8 @@ export default function Home() {
         <SignedOut>
   <div className="text-center text-red-500 mt-4 border-white border-2 p-4">
     <p className="text-2xl">Please Sign in to Vibe & Talk!</p>
-    <p className="text-2xl">Sign in with email: gemajab567@craftapk.com & password: chatforum12345</p>
+    <p className="text-2xl">Sign in with:</p>
+    <p>email: gemajab567@craftapk.com & password: chatforum12345</p>
   </div>
 </SignedOut>
 
